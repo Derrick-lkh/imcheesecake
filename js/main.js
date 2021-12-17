@@ -2,15 +2,30 @@ $(document).ready(function (){
     scroll_handler()
     typingAnimation()
     container_xl()
+    animate_title()
 });
 
 $(window).scroll(function (){
     scroll_handler()
 });
 
-$(window).onresize(function(){
+$(window).resize(function(){
     container_xl()
 })
+
+function animate_title(){
+    $(".animate_box .title").css({
+        "transform": "translateY(0)"
+    })
+    setTimeout(()=>{
+        $(".animate_box .quote").css({
+            "transform": "translateY(0)"
+        })
+        $(".animate_box .author").css({
+            "transform": "translateX(0)"
+        })
+    }, 1000)
+}
 
 function scroll_handler(){
     banner_animate()
@@ -34,7 +49,7 @@ function banner_animate() {
     overlay_color = "181, 23, 158, ";
     if (windows_height > ($(window).height() - $(".nav-header").outerHeight(true))) {
         $(".nav-header").css({
-            "background": "linear-gradient(90deg,rgba(181, 23, 158," + offset_banner + ") 0%,rgba(72, 149, 239," + offset_banner + ") 100%)"
+            "background": "linear-gradient(90deg,rgba(181, 23, 158," + 1 + ") 0%,rgba(72, 149, 239," + 1 + ") 100%)"
         })
     } else {
         offset_banner = 0
