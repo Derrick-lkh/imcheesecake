@@ -1,7 +1,7 @@
 .banner .image-container {
   height: 100vh;
   overflow: hidden;
-  background: url("../images/portrait.jpg");
+  background: url("./images/portrait.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
